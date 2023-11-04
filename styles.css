@@ -1,0 +1,219 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: black;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+/* About, Projects, and Contact section styles */
+section {
+  padding: 5rem 0;
+}
+#about{
+  background-color: #f5e9dc;
+}
+#certificates{
+  background-color:#f5e9dc ;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.container p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Hero styles */
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+/*projects section */
+.project-card {
+  height: 250px;
+  width: 250px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Certificates section styles */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.project-card {
+  height: 160px;
+  width: 250px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Contact section styles */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .container h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p,
+  .container p,
+  .project-card p {
+    font-size: 1.2rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
