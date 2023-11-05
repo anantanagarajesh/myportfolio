@@ -92,24 +92,33 @@ section {
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
+
 /*projects section */
+.projects-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 4rem;
+}
 .project-card {
-  height: 250px;
-  width: 250px;
-  background-color: #fff;
+  height: 270px;
+  width: 420px;
+  background-color: cornsilk;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
 
-.project-card h3 {
+.projects-container h3 {
   font-size: 1.5rem;
+  font-style: italic;
+  display: flex;
+  position:absolute;
+ 
   margin-bottom: 1rem;
 }
 
@@ -119,13 +128,13 @@ section {
 }
 
 /* Certificates section styles */
-.projects-container {
+.certificates-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
 }
 
-.project-card {
+.certificate-card {
   height: 160px;
   width: 250px;
   background-color: #fff;
@@ -136,21 +145,54 @@ section {
 
 }
 
-.project-card:hover {
+.certificate-card:hover {
   transform: translateY(-5px);
 }
 
-.project-card h3 {
+.certificate-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.project-card p {
+.certificate-card p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
 /* Contact section styles */
+
+.contact-section h3{
+  text-align: center;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.icons a i{
+  margin-right: 5rem;
+}
+
+.fa-brands.fa-linkedin, .fa-brands.fa-github, .fa-brands.fa-instagram, .fa-brands.fa-meta{
+  color: black;
+ font-size: 2rem;
+
+}
+
+.icons a:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container h1{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -209,11 +251,51 @@ footer {
 
   .hero p,
   .container p,
-  .project-card p {
+  .certificate-card p {
     font-size: 1.2rem;
   }
 
   .contact-form {
     max-width: 100%;
   }
+}
+/*form*/
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+button:hover {
+  background-color: #0056b3;
 }
