@@ -4,18 +4,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
     
-    $to = "your-email@example.com";
-    $subject = "Contact Form Submission from $name";
+    // Configure your email settings
+    $to = "rajeshmalisetty58@gmail.com"; // Your email address
+    $subject = "New contact form submission from $name";
     $headers = "From: $email";
-
-    mail($to, $subject, $message, $headers);
     
-    $message = "Form has been submitted successfully.";
-    echo '<script>alert("' . $message . '");</script>';
-
-    header("Location: index.html");
+    // Compose the email message
+    $email_message = "Name: $name\n";
+    $email_message .= "Email: $email\n\n";
+    $email_message .= "Message:\n$message";
+    
+    // Send the email
+    if (mail($to, $subject, $email_message, $headers)) {
+        echo "success"; // You can customize this response
+    } else {
+        echo "error"; // You can customize this response
+    }
 } else {
-    $message = "Form has not been submitted.";
-    echo '<script>alert("' . $message . '");</script>';
+    // Handle non-POST requests
+    echo "error"; // You can customize this response
 }
 ?>
